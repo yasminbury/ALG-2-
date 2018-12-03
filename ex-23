@@ -1,0 +1,34 @@
+#include "pch.h"
+#include <iostream>
+int calculodistancia(int tempo, int velm)
+{
+	int distancia = (tempo * velm);
+	return distancia;
+}
+
+int gastogasolina(int distancia)
+{
+	int litros = (distancia / 12);
+	return litros;
+
+}
+
+int main()
+{
+	int tempo = 0;
+	int velm = 0;
+
+	printf("Digite o tempo gasto em minutos da viagem : ");
+	scanf_s("%i",&tempo);
+	tempo = (tempo / 60);
+	printf("Digite a velocidade media da viagem: ");
+	scanf_s("%i", &velm);
+
+	int dist = calculodistancia(tempo, velm);
+	int gastol = gastogasolina(dist);
+
+	printf("##### Dados da Viagem ##### \n");
+	printf("Velocidade média : %i km/h \n Tempo gasto : %i horas \n Distancia percorrida : %i km \n Litros gastos : %i Litros \n", velm, tempo, dist, gastol);
+
+
+}
