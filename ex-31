@@ -1,0 +1,30 @@
+#include "pch.h"
+#include <iostream>
+
+int lernumnegativo(int i,int cont ,int num[5])
+{
+	for (int i = 0; i < 5; i++)
+	{
+		printf("Digite o valor %i. \n", i + 1);
+		scanf_s("%i", &num[i]);
+
+		if (num[i] < 0)
+		{
+			cont = cont + 1;
+		}
+	}
+
+	return cont;
+}
+
+
+int main()
+{
+	int i = 0;
+	int cont = 0;
+	int num[5];
+
+	int numneg = lernumnegativo(i,cont,num);
+	
+	printf("Voce digitou %i valores negativos.", numneg);
+}
