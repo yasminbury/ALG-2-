@@ -1,0 +1,28 @@
+#include "pch.h"
+#include <iostream>
+int lerdados()
+{
+	float a;
+	printf("Digite o valor do raio: ");
+	scanf_s("%f", &a);
+
+	return a;
+}
+void calculoarea(float raio)
+{
+	float area;
+	float pi = 3.14159;
+	area = pi * (pow(raio, 2));
+	printf("A area do raio %.2f e : %f \n", raio, area);
+	
+}
+
+int main()
+{
+	float raio = lerdados();
+
+	calculoarea(raio);
+
+	system("pause");
+	return 0;
+}
