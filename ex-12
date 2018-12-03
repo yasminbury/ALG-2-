@@ -1,0 +1,29 @@
+#include "pch.h"
+#include <iostream>
+int lervalores()
+{
+	float a;
+	printf(": ");
+	scanf_s("%f", &a);
+	return a;
+
+}
+void calculoarea(float base,float alt)
+{
+	float area;
+	area = ((base + alt) / 2);
+	printf("A area do triangulo base %.2f de altura %.2f e %.2f \n", base, alt, area);
+}
+
+int main()
+{
+	printf("Digite o valor da Base do triangulo ");
+	float base = lervalores();
+	printf("Digite o valor da altura do triangulo ");
+	float alt = lervalores();
+
+	calculoarea(base, alt);
+
+	system("Pause");
+	return 0;
+}
