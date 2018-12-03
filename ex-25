@@ -1,0 +1,31 @@
+#include "pch.h"
+#include <iostream>
+float lersalario()
+{
+	float a;
+	printf("Digite seu salario(Utilizar . ao inver de ,) : R$ ");
+	scanf_s("%f", &a);
+
+	return a;
+}
+float calculosal(float salario)
+{
+	float salarioliq;
+
+	salarioliq = salario * 0.90;
+	salarioliq = salarioliq * 0.95;
+
+	return salarioliq;
+}
+
+int main()
+{
+	float salario = lersalario();
+
+	float salarioliq = calculosal(salario);
+
+	printf("Seu salario bruto e R$ %.2f \n Seu salario liquido e R$ %.2f \n", salario, salarioliq);
+
+	system("pause");
+	return 0;
+}
