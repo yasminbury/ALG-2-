@@ -1,0 +1,25 @@
+#include "pch.h"
+#include <iostream>
+float lerdados()
+{
+	float a;
+	printf("Digite valor de fabrica do carro: ");
+	scanf_s("%f", &a);
+
+	return a;
+}
+float calculoimposto(float vcarro)
+{
+	float vtcarro =  vcarro +((vcarro * 0.28) + (vcarro *0.45));
+	return vtcarro;
+}
+int main()
+{
+	float vcarro = lerdados();
+	float vconsumidor = calculoimposto(vcarro);
+
+	printf("Valor do carro de fabrica e R$ %.2f e com os impostos e R$ %.2f \n", vcarro, vconsumidor);
+
+	system("Pause");
+	return 0;
+}
