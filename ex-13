@@ -1,0 +1,33 @@
+#include "pch.h"
+#include <iostream>
+int lerdados()
+{
+	int a;
+	printf("Digite o numero: ");
+	scanf_s("%i", &a);
+
+	return a;
+}
+
+void calculardados(int num)
+{
+	int i = 0;
+	int impar = 1;
+
+	printf("Os %i primeiros impares sao:\n", num);
+
+	while (i < num)
+	{
+		printf("%i | ", impar);
+		impar = impar + 2;
+		i = i + 1;
+
+	}
+}
+int main()
+{
+	int num = lerdados();
+	calculardados(num);
+
+	return 0;
+}
