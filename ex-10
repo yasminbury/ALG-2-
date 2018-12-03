@@ -1,0 +1,53 @@
+#include "pch.h"
+#include <iostream>
+
+float pagamento(int qt, int cod)
+{
+	float total = 0;
+
+	if (cod == 1001)
+	{
+		total = qt * 5.32;
+	}
+
+	else if (cod == 1324)
+	{
+		total = qt * 6.45;
+	}
+	else if (cod == 6548)
+	{
+		total = qt * 2.37;
+	}
+	else if (cod == 987)
+	{
+		total = qt * 5.32;
+	}
+	else if (cod == 7623)
+	{
+		total = qt * 6.45;
+	}
+	else
+	{
+		printf("Codigo invalido");
+	}
+	return total;
+}
+
+
+int main()
+{
+	int cod;
+	int qt;
+
+	printf("Digite a quantidade do produto: ");
+	scanf_s("%i", &qt);
+
+	printf("Digite o codigo do produto \n 1001 - Arroz \n 1324 - Feijao \n 6548 - Trigo \n 987 - Leite \n 7623 - Farofa \n ");
+	scanf_s("%i", &cod);
+
+	float total = pagamento(qt,cod);
+	printf("Valor total e %.2f \n ", total);
+
+	system("Pause");
+	return 0;
+}
